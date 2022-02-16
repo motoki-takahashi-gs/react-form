@@ -26,9 +26,17 @@ function App() {
     })
   }
 
+  function handleSubmit(event) {
+    event.preventDefault() // this prevents a browser from going to a URL with parameters
+
+    const results = `Your name is ${formData.firstName} ${formData.lastName}. Your email is ${formData.email}. Your comments are ${formData.comments}. You are ${formData.isFriendly ? '' : 'not '}friendly. Your employment status is ${formData.employment}. Your favorite color is ${formData.favColor}.`
+
+    alert(results)
+  }
+
   return (
     <div className="App">
-      <form>
+      <form onSubmit={handleSubmit}>
         <input
           type='text'
           placeholder='First name'
@@ -119,6 +127,8 @@ function App() {
           <option value="indigo">Indigo</option>
           <option value="violet">Violet</option>
         </select>
+        <br />
+        <button>Submit</button>
       </form>
     </div>
   );

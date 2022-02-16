@@ -21,3 +21,7 @@ input[type="checkbox"] {
 textarea {
   height: 60px;
 }
+
+fieldset {
+  margin-top: 1em;
+}

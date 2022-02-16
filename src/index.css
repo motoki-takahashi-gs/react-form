@@ -23,5 +23,9 @@ textarea {
 }
 
 fieldset {
+  margin: 1em 0;
+}
+
+select {
   margin-top: 1em;
 }
